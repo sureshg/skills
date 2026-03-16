@@ -1,4 +1,4 @@
-# 🧠 Skills Repository
+# Skills Repository
 
 A collection of skills for easy reference and usage.
 
