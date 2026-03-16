@@ -1,0 +1,11 @@
+# OS and IDE
+.DS_Store
+.idea/
+*.iml
+
+# AI Agents and Tools
+.junie/
+.claude/
+.codex/
+.cursor/
+.env
