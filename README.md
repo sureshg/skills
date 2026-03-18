@@ -14,8 +14,6 @@ Agent skills for Kotlin development, installed globally for [Junie](https://juni
 
 ## Install
 
-Requires [Node.js](https://nodejs.org).
-
 ```bash
 ./install.sh
 ```

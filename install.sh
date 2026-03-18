@@ -19,7 +19,7 @@ add_all() {
 
 command -v npx &>/dev/null || { echo "Error: npx required. Install Node.js: https://nodejs.org" >&2; exit 1; }
 
-echo "🔧 Installing skills for Junie & Claude Code..."
+echo "🧠 Installing skills for JetBrains Junie & Claude Code..."
 
 add     "anthropics/skills" "skill-creator"
 add     "alexandru/skills" "jspecify-nullness" "kotlin-java-library"
