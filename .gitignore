@@ -1,9 +1,15 @@
-# OS and IDE
+# OS
 .DS_Store
+
+# IDE
 .idea/
 *.iml
 
-# AI Agents and Tools
+# Node
+node_modules/
+package-lock.json
+
+# AI Agents
 .junie/
 .claude/
 .codex/

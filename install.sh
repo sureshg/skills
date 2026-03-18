@@ -1,34 +1,30 @@
 #!/bin/bash
+set -euo pipefail
 
-# Script to install skills into the global Junie skills directory (~/.junie/skills/)
-set -e
-
-SKILLS_DIR="$HOME/.junie/skills"
-
-# Create the directory if it doesn't exist
-mkdir -p "$SKILLS_DIR"
-
-echo "Installing skills to $SKILLS_DIR..."
-
-# Get the script's directory to allow running it from anywhere
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+OPTS=(-g -y -a junie -a claude-code)
 
-# Iterate through directories in the script's directory
-for dir in "$SCRIPT_DIR"/*/; do
-    [ -d "$dir" ] || continue
-    
-    # Remove trailing slash and path
-    skill_name=$(basename "$dir")
-    
-    # Skip directories that don't have a SKILL.md file or are hidden
-    if [[ "$skill_name" == "."* ]] || [[ ! -f "$dir/SKILL.md" ]]; then
-        continue
-    fi
-    
-    echo "  Installing $skill_name..."
-    # Create the target skill directory and copy contents
-    mkdir -p "$SKILLS_DIR/$skill_name"
-    cp -r "$dir"* "$SKILLS_DIR/$skill_name/"
-done
+add() {
+  local repo="$1"; shift
+  local args=()
+  for s in "$@"; do args+=(--skill "$s"); done
+  echo "+ $repo ${args[*]}"
+  npx -y skills add "$repo" "${args[@]}" "${OPTS[@]}"
+}
 
-echo "Done! Skills are now available to Junie."
+add_all() {
+  echo "+ $1 (all)"
+  npx -y skills add "$1" --skill '*' "${OPTS[@]}"
+}
+
+command -v npx &>/dev/null || { echo "Error: npx required. Install Node.js: https://nodejs.org" >&2; exit 1; }
+
+echo "🔧 Installing skills for Junie & Claude Code..."
+
+add     "anthropics/skills" "skill-creator"
+add     "alexandru/skills" "jspecify-nullness" "kotlin-java-library"
+add     "glaforge/deslopify" "deslopify"
+add_all "$SCRIPT_DIR/skills"
+add_all "Kotlin/kotlin-agent-skills"
+
+echo "✅ Done."
