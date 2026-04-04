@@ -24,6 +24,7 @@ echo "🧠 Installing skills for JetBrains Junie & Claude Code..."
 add     "anthropics/skills" "skill-creator"
 add     "alexandru/skills" "jspecify-nullness" "kotlin-java-library"
 add     "glaforge/deslopify" "deslopify"
+add     "aldefy/compose-skill" "jetpack-compose-expert-skill"
 add_all "$SCRIPT_DIR/skills"
 add_all "Kotlin/kotlin-agent-skills"
 

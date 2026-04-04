@@ -10,6 +10,7 @@ Agent skills for Kotlin development, installed globally for [Junie](https://juni
 | [alexandru/skills](https://github.com/alexandru/skills) | `jspecify-nullness`, `kotlin-java-library` |
 | [anthropics/skills](https://github.com/anthropics/skills) | `skill-creator` |
 | [glaforge/deslopify](https://github.com/glaforge/deslopify) | `deslopify` |
+| [aldefy/compose-skill](https://github.com/aldefy/compose-skill) | `jetpack-compose-expert-skill` |
 | [Kotlin/kotlin-agent-skills](https://github.com/Kotlin/kotlin-agent-skills) | All |
 
 ## Install
