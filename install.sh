@@ -22,11 +22,12 @@ command -v npx &>/dev/null || { echo "Error: npx required. Install Node.js: http
 echo "🧠 Installing skills for JetBrains Junie & Claude Code..."
 
 add     "anthropics/skills" "skill-creator"
-add     "alexandru/skills" "jspecify-nullness" "kotlin-java-library"
 add     "glaforge/deslopify" "deslopify"
-add     "aldefy/compose-skill" "jetpack-compose-expert-skill"
-add_all "$SCRIPT_DIR/skills"
-add_all "mvanhorn/last30days-skill"
+add     "alexandru/skills" "jspecify-nullness" "kotlin-java-library"
+add     "aldefy/compose-skill" "compose-expert"
+
 add_all "Kotlin/kotlin-agent-skills"
+add_all "mvanhorn/last30days-skill"
+add_all "$SCRIPT_DIR/skills"
 
 echo "✅ Done."
