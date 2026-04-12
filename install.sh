@@ -25,6 +25,7 @@ add     "anthropics/skills" "skill-creator"
 add     "glaforge/deslopify" "deslopify"
 add     "alexandru/skills" "jspecify-nullness" "kotlin-java-library"
 add     "aldefy/compose-skill" "compose-expert"
+# add   "santimattius/structured-coroutines" "kotlin-coroutines-skill"
 
 add_all "Kotlin/kotlin-agent-skills"
 add_all "mvanhorn/last30days-skill"
