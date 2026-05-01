@@ -29,6 +29,7 @@ add     "aldefy/compose-skill" "compose-expert"
 
 add_all "Kotlin/kotlin-agent-skills"
 add_all "mvanhorn/last30days-skill"
+add_all "ollygarden/opentelemetry-agent-skills"
 add_all "$SCRIPT_DIR/skills"
 
 echo "✅ Done."
