@@ -20,16 +20,14 @@ add_all() {
 command -v npx &>/dev/null || { echo "Error: npx required. Install Node.js: https://nodejs.org" >&2; exit 1; }
 
 echo "🧠 Installing skills for JetBrains Junie & Claude Code..."
-
-add     "anthropics/skills" "skill-creator"
 add     "glaforge/deslopify" "deslopify"
 add     "alexandru/skills" "jspecify-nullness" "kotlin-java-library"
-add     "aldefy/compose-skill" "compose-expert"
 # add   "santimattius/structured-coroutines" "kotlin-coroutines-skill"
 
 add_all "Kotlin/kotlin-agent-skills"
-add_all "mvanhorn/last30days-skill"
+add_all "chrisbanes/skills"
 add_all "ollygarden/opentelemetry-agent-skills"
 add_all "$SCRIPT_DIR/skills"
+# add_all "mvanhorn/last30days-skill"
 
 echo "✅ Done."
