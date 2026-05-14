@@ -24,7 +24,7 @@ If multiple build systems coexist, update each one independently.
 Use [caupain](https://github.com/deezer/caupain) to discover available updates, then apply them to the catalog. On
 macOS, install via `brew install deezer/repo/caupain`.
 
-1. Run `caupain --no-cache` in the project root.
+1. Run `caupain` in the project root.
 2. Update only version values in the `[versions]` section of `gradle/libs.versions.toml`.
 3. Preserve exact formatting — quotes, spacing, alignment, line order.
 4. Never modify `.gradle.kts` or `.gradle` build files.
@@ -42,7 +42,7 @@ kotlin = "2.4.0"
 
 Use caupain with the root-level catalog, then update both the catalog and Amper module/project files.
 
-1. Run `caupain --no-cache -i libs.versions.toml` in the project root.
+1. Run `caupain -i libs.versions.toml` in the project root.
 2. Update version values in `libs.versions.toml` (at the project root, not under `gradle/`).
 3. After updating the catalog, scan all `module.yaml`, template yaml files (referenced via `apply:` in `module.yaml`),
    and `project.yaml` for inline version values that match a bumped version, and update them to match.
