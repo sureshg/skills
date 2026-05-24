@@ -48,7 +48,7 @@ Favor a layered testing strategy: types and pure functions first, then integrate
 
 ## Use Modern Kotlin, Keep It Simple
 
-Target Kotlin `2.3.20` and current standard library APIs.
+Target Kotlin `2.4.0` and current standard library APIs.
 
 - Prefer the Kotlin standard library before adding dependencies.
 - Choose explicit, maintainable code over incidental abstraction.

@@ -1,6 +1,6 @@
 ---
 name: bump-versions
-description: Bump dependency versions in Gradle version catalogs, Amper catalogs, and Maven POMs using caupain or the Maven Versions Plugin.
+description: Bump dependency versions in Gradle version catalogs, Kotlin Toolchain catalogs, and Maven POMs using caupain or the Maven Versions Plugin.
 ---
 
 # Bump Versions
@@ -13,8 +13,8 @@ Before updating anything, identify which build system the project uses:
 
 - `gradle/libs.versions.toml` → **Gradle** version catalog
   ([docs](https://docs.gradle.org/current/userguide/version_catalogs.html))
-- `libs.versions.toml` at the project root alongside `module.yaml` → **Amper** version catalog
-  ([docs](https://amper.org/dev/))
+- `libs.versions.toml` at the project root alongside `module.yaml` → **Kotlin Toolchain** version catalog
+  ([docs](https://kotlin-toolchain.org/dev/))
 - `pom.xml` → **Maven** project ([docs](https://maven.apache.org/))
 
 If multiple build systems coexist, update each one independently.
@@ -38,16 +38,16 @@ kotlin = "2.3.0"
 kotlin = "2.4.0"
 ```
 
-## Amper Version Catalog
+## Kotlin Toolchain Version Catalog
 
-Use caupain with the root-level catalog, then update both the catalog and Amper module/project files.
+Use caupain with the root-level catalog, then update both the catalog and Kotlin Toolchain module/project files.
 
 1. Run `caupain -i libs.versions.toml` in the project root.
 2. Update version values in `libs.versions.toml` (at the project root, not under `gradle/`).
 3. After updating the catalog, scan all `module.yaml`, template yaml files (referenced via `apply:` in `module.yaml`),
    and `project.yaml` for inline version values that match a bumped version, and update them to match.
 4. Preserve exact formatting — quotes, spacing, alignment, line order.
-5. Never modify Amper build config beyond version bumps.
+5. Never modify Kotlin Toolchain build config beyond version bumps.
 
 ```toml
 # libs.versions.toml — Before
