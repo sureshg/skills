@@ -41,6 +41,7 @@ kotlin = "2.4.0"
 ## Kotlin Toolchain Version Catalog
 
 Use caupain with the root-level catalog, then update both the catalog and Kotlin Toolchain module/project files.
+Refer to the [Kotlin Toolchain documentation](https://kotlin-toolchain.org/dev/) for current Toolchain guidance instead of guessing.
 
 1. Run `caupain -i libs.versions.toml` in the project root.
 2. Update version values in `libs.versions.toml` (at the project root, not under `gradle/`).
@@ -48,6 +49,7 @@ Use caupain with the root-level catalog, then update both the catalog and Kotlin
    and `project.yaml` for inline version values that match a bumped version, and update them to match.
 4. Preserve exact formatting — quotes, spacing, alignment, line order.
 5. Never modify Kotlin Toolchain build config beyond version bumps.
+6. Do not run builds, tests, or any `./kotlin` command; this skill only makes version changes.
 
 ```toml
 # libs.versions.toml — Before
@@ -96,4 +98,5 @@ Use the Maven Versions Plugin to discover available updates, then apply them to 
 - Only change version values. Never alter keys, property names, dependency coordinates, or structural formatting.
 - Prefer stable releases over pre-release/beta unless the project already uses a pre-release version for that
   dependency.
+- Never run builds, tests, or `./kotlin` commands for version-only updates.
 - Make no other changes to the codebase beyond version bumps.
