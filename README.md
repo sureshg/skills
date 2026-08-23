@@ -13,7 +13,6 @@ and [Claude Code](https://docs.anthropic.com/en/docs/claude-code).
 | [mvanhorn/last30days-skill](https://github.com/mvanhorn/last30days-skill)                         | All                                                                                                                                          |
 | [Kotlin/kotlin-agent-skills](https://github.com/Kotlin/kotlin-agent-skills)                       | All                                                                                                                                          |
 | [ollygarden/opentelemetry-agent-skills](https://github.com/ollygarden/opentelemetry-agent-skills) | All                                                                                                                                          |
-| [singleton11/kotlin-toolchain-skills](https://github.com/singleton11/kotlin-toolchain-skills)     | All                                                                                                                                          |
 | [oracle/skills](https://github.com/oracle/skills/tree/main/graal/native-image)                    | `graal` (GraalVM Native Image)                                                                                                               |
 
 > 💡 Browse the [JetBrains Skills Registry](https://github.com/JetBrains/skills) to discover more community skills.
